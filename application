@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cosmetics Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        nav {
+            background-color: #555;
+            padding: 0.5em;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 1em;
+            margin: 0 1em;
+        }
+
+        section {
+            padding: 2em;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Your Cosmetics</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <section>
+        <h2>Welcome to Your Cosmetics</h2>
+        <p>Discover the beauty of our high-quality cosmetics that enhance your natural charm.</p>
+    </section>
+
+    <section>
+        <h2>Featured Products</h2>
+        <div>
+            <!-- Product 1 -->
+            <div>
+                <img src="product1.jpg" alt="Product 1">
+                <h3>Product 1 Name</h3>
+                <p>Description of Product 1.</p>
+                <p>Price: $XX.XX</p>
+            </div>
+
+            <!-- Product 2 -->
+            <div>
+                <img src="product2.jpg" alt="Product 2">
+                <h3>Product 2 Name</h3>
+                <p>Description of Product 2.</p>
+                <p>Price: $XX.XX</p>
+            </div>
+
+            <!-- Add more products as needed -->
+        </div>
+    </section>
+
+    <section>
+        <h2>Beauty Tips and Tutorials</h2>
+        <p>Stay updated with our latest beauty tips and tutorials on our blog.</p>
+        <a href="#">Read More</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Cosmetics. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+const express = require('express');
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+// Set EJS as the view engine
+app.set('view engine', 'ejs');
+
+// Serve static files from the 'public' folder
+app.use(express.static('public'));
+
+// Define routes
+app.get('/', (req, res) => {
+    res.render('index');
+});
+
+// Start the server
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+});
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cosmetics</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+    <header class="bg-dark text-white text-center py-4">
+        <h1>Your Cosmetics</h1>
+    </header>
+
+    <nav class="bg-secondary text-white text-center py-2">
+        <a href="/" class="text-white">Home</a>
+        <a href="/products" class="text-white">Products</a>
+        <a href="/blog" class="text-white">Blog</a>
+        <a href="/contact" class="text-white">Contact</a>
+    </nav>
+
+    <section class="container mt-4">
+        <%- include('partials/flash-messages') %>
+        <%- body %>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Your Cosmetics. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
