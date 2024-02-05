@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: perfume-store-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: perfume-store
+  template:
+    metadata:
+      labels:
+        app: perfume-store
+    spec:
+      containers:
+      - name: perfume-store
+        image: perfume-store:latest
+        ports:
+        - containerPort: 80
