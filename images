@@ -1,0 +1,7 @@
+<div class="product">
+    <img src="perfume1.jpg" alt="Perfume 1">
+    <h2>Perfume Name 1</h2>
+    <p>Description of Perfume 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p>$50.00</p>
+    <button>Add to Cart</button>
+</div>
