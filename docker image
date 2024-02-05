@@ -1,0 +1,15 @@
+# Use an existing image as a base
+FROM nginx:alpine
+
+# Set the working directory in the container
+WORKDIR /usr/share/nginx/html
+
+# Copy the website files into the container
+COPY index.html .
+COPY style.css css/
+COPY perfume1.jpg images/
+COPY perfume2.jpg images/
+COPY perfume3.jpg images/
+
+# Expose port 80 to allow incoming traffic
+EXPOSE 80
