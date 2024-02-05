@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: perfume-store-service
+spec:
+  selector:
+    app: perfume-store
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
